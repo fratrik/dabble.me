@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     get '/admin'                  => 'application#admin', :as => "admin"    
   end  
 
+  resources :charges
+
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   devise_scope :user do

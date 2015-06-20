@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/stripe/stripe-ruby
+  revision: 37d1a0b8bf9cd16707bfe526ba1a76e0c6502066
+  specs:
+    stripe (1.22.0)
+      json (~> 1.8.1)
+      rest-client (~> 1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -370,6 +378,7 @@ DEPENDENCIES
   sinatra (>= 1.3.0)
   spring
   spring-commands-rspec
+  stripe!
   summernote-rails
   twbs_sass_rails
   uglifier (>= 1.3.0)
