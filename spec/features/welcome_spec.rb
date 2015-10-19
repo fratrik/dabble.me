@@ -1,11 +1,20 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Welcome' do
-  context 'Index' do
-    it "has 'Dabble Me' in title" do
-      visit root_path
+describe 'Pages' do
+  include_context 'has all objects'
 
-      expect(page).to have_title I18n.t('dabbleme')
-    end
+  it 'has corect title for Root page' do
+    visit root_path
+    expect(page).to have_title 'Dabble Me - A free private journal.'
+  end
+
+  it 'has correct title for FAQs page' do
+    visit faqs_path
+    expect(page).to have_title 'Dabble Me FAQs'
+  end
+
+  it 'has correct title for Subscribe page' do
+    visit subscribe_path
+    expect(page).to have_title 'Subscribe to Dabble Me PRO'
   end
 end
